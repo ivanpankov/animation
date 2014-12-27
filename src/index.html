@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container {
+            position: relative;
+            width: 720px;
+            border: 1px solid black;
+            height: 700px;
+            margin: 10px;
+        }
+
+        .item {
+            position: absolute;
+            display: block;
+            /*top: 0;*/
+            left:0;
+            width: 20px;
+            height: 20px;
+            background-color: darkred;
+            /*border-radius: 10px;*/
+        }
+    </style>
+    <script src="js/animation.js"></script>
+
+</head>
+<body>
+
+<input type="text" id="fps1" />
+<input type="text" id="fps2" />
+<input type="text" id="fps3" />
+<div id="container">
+
+</div>
+<button id="play">Play</button>
+<button id="pause">Pause</button>
+<button id="reverse">Reverse</button>
+<button id="gostart">goStart</button>
+<button id="goend">goEnd</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -145,6 +145,7 @@
 
     /*
      * Easings
+     * I can't remember from where get these tweens
      */
     var ease = {
         // simple linear tweening - no easing, no acceleration

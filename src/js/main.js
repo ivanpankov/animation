@@ -21,21 +21,22 @@
     els.forEach(function (item) {
         var top = parseInt(item.style.top);
         tweens.push(new Tween({
-            start: {left: 0, top: top, borderRadius: 0},
-            end: {left: 700, top: top + 30, borderRadius: 10},
+            start: {left: 0, top: 0, borderRadius: 0},
+            end: {left: 700, top: 0 + 30, borderRadius: 10},
             duration: 2000,
             delay: 0,
             ease: 'easeInOutCubic',
             render: function () {
                 //item.style.left = Math.round(this.data.left) + 'px';
                 //item.style.top = Math.round(this.data.top) + 'px';
-                //item.style.borderRadius = Math.round(this.data.borderRadius) + 'px';
+                item.style.borderRadius = Math.round(this.data.borderRadius) + 'px';
+                item.style.transform = 'translate3d('+ this.data.left +'px , '+this.data.top+ 'px , 0)';
 
-                for (var prop in this.data) {
-                    if (this.data.hasOwnProperty(prop)) {
-                        item.style[prop] = Math.round(this.data[prop]) + 'px';
-                    }
-                }
+                //for (var prop in this.data) {
+                //    if (this.data.hasOwnProperty(prop)) {
+                //        item.style[prop] = Math.round(this.data[prop]) + 'px';
+                //    }
+                //}
             }
         }));
     });
